@@ -11,9 +11,11 @@ input {
     border: 2px solid #BCBDC0;
     width: 300px;
     text-align: center;
+    border-radius: 15px;
 }
 
 input::placeholder {
+    color: black;
     font-weight: bold;
     font-size: medium;
     opacity: 0.5;
@@ -29,6 +31,7 @@ button {
     margin: 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 button {
