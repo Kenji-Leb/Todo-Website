@@ -5,7 +5,7 @@ function loginVerify(){
     if (username == 'AdminSEF123' && password == 'SeF@ctORy$$456') {
         window.location.href = "./TDL-page.html";
     } else {
-        alert('Incorrect username or password. Please try again.');
+        alert('Incorrect!, Please try again.');
     }
 }
 
