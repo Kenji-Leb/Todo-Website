@@ -17,21 +17,22 @@
 </head>
 <body class="roboto-regular">
     <section class="centered bg-color">
-        <div class="div-container center">
+        <form class="div-container center" method="post" name="form" action="./TDL-page.html">
             <div class="div-elements">
                 <h1>Login Form</h1>
             </div>
             <div class="div-elements">
                 <h3>Username:</h3>
-                <input type="text" placeholder="Enter your username"></div>
+                <input type="text" placeholder="Enter your username" id="username" autocomplete="off" required></div>
             <div class="div-elements">
                 <h3>Password:</h3>
-                <input type="password" placeholder="Enter your passowrd"/>
+                <input type="password" placeholder="Enter your passowrd" id="password" required/>
             </div>
             <div class="div-elements">
-                <button>Login</button>
+                <button type="button" value="login" onclick="loginVerify()">Login</button>
             </div>                                       
-        </div>
-    </section> 
+        </form>
+    </section>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
