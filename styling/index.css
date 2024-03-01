@@ -18,6 +18,7 @@
 
 .div-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -27,4 +28,19 @@
 .div-elements, h2 {
     text-align: center;
     padding: 15px 24px;
+}
+
+@media (max-width: 500px) {
+    .div-container{
+        width: fit-content;
+        margin: auto;
+    }
+    .div-elements{
+        width: fit-content;
+        margin: auto;
+    }
+
+    input{
+
+    }
 }

@@ -4,6 +4,10 @@
     margin:auto;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .body-img {
     background-image: url(../Images/bg-image.webp);
     background-size: cover;
@@ -52,14 +56,4 @@ button {
 button:hover {
     background-color: white;
     color: rgba(61, 155, 243, 0.984);
-}
-
-@media (max-width: 320px) {
-    .div-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: start;
-
-    }
 }
