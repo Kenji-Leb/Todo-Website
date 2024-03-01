@@ -31,13 +31,15 @@ function createTaskElement(task, date){
 
     listItem.textContent = task;
 
-    const dateItem = document.createElement('li')
+    const dateItem = document.createElement('p')
     const deleteButton = document.createElement('button')
     const completeBtn = document.createElement('button')
 
     deleteButton.textContent = 'Delete'
     completeBtn.textContent = 'Mark as done'
     dateItem.textContent = date;
+
+    deleteButton.classList.add('red-clr')
 
     listItem.appendChild(dateItem)
     listItem.appendChild(deleteButton)
@@ -63,7 +65,7 @@ function createTaskElement(task, date){
 function saveTasks() {
 
     let tasks = [];
-    taskList.querySelectorAll('li').forEach(function(item){
+    taskList.querySelectorAll('h3').forEach(function(item){
         tasks.push(item.textContent.replace('DeleteMark as done', '').trim())
     });
 
@@ -73,5 +75,8 @@ function saveTasks() {
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
-    tasks.forEach(createTaskElement);
+    tasks.forEach(function(item){
+        const [task, date] = item.split('|');
+        createTaskElement(task, date);
+    });
 }
