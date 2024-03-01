@@ -4,17 +4,12 @@
     margin:auto;
 }
 
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
 .body-img {
     background-image: url(../Images/bg-image.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 
 input {
     margin: 0.5rem;
@@ -35,7 +30,7 @@ input::placeholder {
 button {
     border: none;
     color: white;
-    padding: 12px 24px;
+    padding: 8px 18px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -49,7 +44,7 @@ button {
     background-color:rgba(61, 155, 243, 0.984);
     color: white;
     border: 2px solid #BCBDC0;
-    font-size: large;
+    font-size: medium;
     font-weight: bold;
 }
   
