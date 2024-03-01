@@ -29,14 +29,25 @@ function createTaskElement(task){
     listItem.textContent = task;
 
     const deleteButton = document.createElement('button')
+    const completeBtn = document.createElement('button')
+
     deleteButton.textContent = 'Delete'
+    completeBtn.textContent = 'Mark as done'
 
     listItem.appendChild(deleteButton)
+    listItem.appendChild(completeBtn)
 
     taskList.appendChild(listItem)
 
     deleteButton.addEventListener('click', function(){
         taskList.removeChild(listItem)
+        saveTasks()
+        
+    })
+
+    completeBtn.addEventListener('click', function(){
+        completeBtn.classList.toggle('done-task')
+
         saveTasks()
     })
 
@@ -46,7 +57,7 @@ function saveTasks() {
 
     let tasks = [];
     taskList.querySelectorAll('li').forEach(function(item){
-        tasks.push(item.textContent.replace('Delete', '').trim())
+        tasks.push(item.textContent.replace('DeleteMark as done', '').trim())
     });
 
     localStorage.setItem('tasks', JSON.stringify(tasks))

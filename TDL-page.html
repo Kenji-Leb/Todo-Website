@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./styling/TDL-page.css">
+    <link rel="stylesheet" href="./Images/bg-image.webp">
+    <link rel="stylesheet" href="./styling/utilities.css">
+    <link rel="stylesheet" href="./styling/fonts.css">
+    <link rel="stylesheet" href="./styling/colors.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +16,19 @@
 
     <title>Todo list</title>
 </head>
-<body>
-    <div class="container">
-        <h1>TO-DO List</h1>
+<body class="body-img">
+    <section class="centered bg-color">
+        <div class="div-container">
+            <h1>TO-DO List</h1>
+    
+            <input type="text" id="taskInput" placeholder="Add a task">
 
-        <input type="text" id="taskInput" placeholder="Add a task">
+            <button id="addTask">Add</button>
 
-    <button id="addTask">Add</button>
+            <ul id="taskList"></ul>
 
-    <ul id="taskList"></ul>
-
-    </div>
+        </div>
+    </section>
 </body>
 <script src="./scripts/todo.js"></script>
 </html>
