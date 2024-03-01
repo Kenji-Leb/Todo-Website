@@ -27,19 +27,22 @@ addButton.addEventListener('click', addTask)
 
 function createTaskElement(task, date){
 
-    const listItem = document.createElement('li')
+    const listItem = document.createElement('h3');
 
-    listItem.textContent = `${task} ${date}`;
+    listItem.textContent = task;
 
+    const dateItem = document.createElement('li')
     const deleteButton = document.createElement('button')
     const completeBtn = document.createElement('button')
 
     deleteButton.textContent = 'Delete'
     completeBtn.textContent = 'Mark as done'
-    
+    dateItem.textContent = date;
 
+    listItem.appendChild(dateItem)
     listItem.appendChild(deleteButton)
     listItem.appendChild(completeBtn)
+
 
     taskList.appendChild(listItem)
 

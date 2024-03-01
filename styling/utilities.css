@@ -43,7 +43,7 @@ button {
 button {
     background-color:rgba(61, 155, 243, 0.984);
     color: white;
-    border: 2px solid #BCBDC0;
+    border: 2px solid black;
     font-size: medium;
     font-weight: bold;
 }
@@ -52,3 +52,4 @@ button:hover {
     background-color: white;
     color: rgba(61, 155, 243, 0.984);
 }
+
