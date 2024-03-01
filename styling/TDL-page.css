@@ -39,7 +39,6 @@ ul, li {
 }
 
 p {
-    position: relative;
     margin: 5px;
     background-color: blue;
     width: fit-content;

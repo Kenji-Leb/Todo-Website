@@ -40,6 +40,7 @@ function createTaskElement(task, date){
     dateItem.textContent = date;
 
     deleteButton.classList.add('red-clr')
+    dateItem.classList.add('p')
 
     listItem.appendChild(dateItem)
     listItem.appendChild(deleteButton)
@@ -76,7 +77,7 @@ function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
     tasks.forEach(function(item){
-        const [task, date] = item.split('|');
+        const [task, date] = item.split('||||');
         createTaskElement(task, date);
     });
 }
