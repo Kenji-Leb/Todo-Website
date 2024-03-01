@@ -1,38 +1,42 @@
 const addButton = document.getElementById("addTask");
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
+const dateInput = document.getElementById("dateInput")
 
 loadTasks()
 
 function addTask() {
     const task = taskInput.value.trim();
+    const date = dateInput.value.trim();
 
-    if (task) {
-        createTaskElement(task);
+    if (task && date) {
+        createTaskElement(task, date);
 
         taskInput.value = '';
+        dateInput.value = '';
 
         saveTasks();
 
     } else {
-        alert('Please enter a task!')
+        alert('Please enter the missing fields!')
     }
 
 }
 
 addButton.addEventListener('click', addTask)
 
-function createTaskElement(task){
+function createTaskElement(task, date){
 
     const listItem = document.createElement('li')
 
-    listItem.textContent = task;
+    listItem.textContent = `${task} ${date}`;
 
     const deleteButton = document.createElement('button')
     const completeBtn = document.createElement('button')
 
     deleteButton.textContent = 'Delete'
     completeBtn.textContent = 'Mark as done'
+    
 
     listItem.appendChild(deleteButton)
     listItem.appendChild(completeBtn)
