@@ -22,11 +22,7 @@
     align-items: center;
     margin: 60px;
     width: 100%;
-}
-
-.div-children {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
 ul, li {
